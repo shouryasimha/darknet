@@ -1,5 +1,7 @@
 ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png)
 
+
+
 # Darknet #
 Darknet is an open source neural network framework written in C and CUDA. It is fast, easy to install, and supports CPU and GPU computation.
 
@@ -11,20 +13,7 @@ For more information see the [Darknet project website](http://pjreddie.com/darkn
 
 For questions or issues please use the [Google Group](https://groups.google.com/forum/#!forum/darknet).
 
-## darknet-YoloV3
-## Import this repo on command prompt :
-
-echo "# darknet-YoloV3" >> README.md
-
-git init
-
-git add README.md
-
-git commit -m "first commit"
-
-git remote add origin https://github.com/shouryasimha/darknet-YoloV3.git
-
-git push -u origin master
+## Dataset Source : http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html
 
 ## Link to the Colab Notebook to run the model on windows : https://colab.research.google.com/drive/1CE8RJArN37rdFeZzjjBvR5BXHRwYvi3Z#scrollTo=EoisahzAUWWL
 
@@ -50,12 +39,14 @@ git push -u origin master
 
 3)Reducing the mini_vatch size = batch/subdivisions will increase the computation speed.
 
-4)Model with highest mAP should be chosen to detect objects in test images
+4)Weights with highest mAP should be chosen for best results.
+## to calculate the mAP use command:
+Example : darknet.exe detector recall data/obj.data yolo-obj.cfg backup\yolo-obj_7000.weights
 
 
 6)Increasing the number of anchors , increases the avg IOU and possibility to detect the small classes.But remember to change the masks.
 #### Note : Don't do this unless you are an expert in DL or CNN, bcz this will throw an error.
-7)Increasing the max_batches resulted in increase in loss
+7)Increasing the max_batches resulted in increase in loss after 12000(num of class = 6, max_batches = num_class * 2000)
 
 #### Future Work:
 Build Models using yolov3.spp and yolov3_5l as they are customised model and can help in detecting small objects in large images.
