@@ -3,6 +3,8 @@
 ## .cfg:
 subdivisions = 16
 batches = 64
+filters = (num of classes + 5) *3
+classes = num of classes
 ## To re calculate anchors
 Only if you are an expert in neural detection networks - recalculate anchors for your dataset for width and height from cfg-file: darknet.exe detector calc_anchors data/input_anomaly.data -num_of_clusters 9 -width 416 -height 416 then set the same 9 anchors in each of 3 [yolo]-layers in your cfg-file. But you should change indexes of anchors masks= for each [yolo]-layer, so that 1st-[yolo]-layer has anchors larger than 60x60, 2nd larger than 30x30, 3rd remaining. Also you should change the filters=(classes + 5)*<number of mask> before each [yolo]-layer. If many of the calculated anchors do not fit under the appropriate layers - then just try using all the default anchors.# Darknet #
 ## If my Repo  doesn't work, use this repo : https://github.com/AlexeyAB/darknet.git
