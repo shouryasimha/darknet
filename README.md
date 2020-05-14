@@ -39,11 +39,11 @@ For questions or issues please use the [Google Group](https://groups.google.com/
 
 ## Observations:
 
-1)If the image resolution is low, detecting small object classes becomes difficult for the images.
+1)If the image resolution is low, detecting small object is hard.
 
 2)After calculating anchor boxes, still the the small object class detection was not more than 50%
 
-3)Reducing the mini_vatch size = batch/subdivisions will increase the computation speed.
+3)Reducing the mini_batch size = batch/subdivisions will increase the computation speed.
 
 4)Weights with highest mAP should be chosen for best results.
 ## to calculate the mAP use command:
