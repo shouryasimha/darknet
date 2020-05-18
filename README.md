@@ -1,6 +1,6 @@
 ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png)
 #### Directory Structure
-
+#### scratches_yolo_final.py - Entire code with comments to walk you through the process
 ## .cfg:
 subdivisions = 16
 batches = 64
